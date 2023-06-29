@@ -21,7 +21,7 @@ class DetailScreen extends StatelessWidget {
             children: [
               Container(
                 width: double.infinity,
-                height: 255.0,
+                height: 225.0,
                 decoration: const BoxDecoration(
                   image: DecorationImage(
                     image: NetworkImage(
@@ -83,10 +83,10 @@ class DetailScreen extends StatelessWidget {
                 ),
               ),
               Positioned(
-                top: 235.0,
+                top: 205.0,
                 child: Container(
                   width: MediaQuery.of(context).size.width,
-                  height: 600.0,
+                  height: 650.0,
                   decoration: const BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.only(
@@ -108,10 +108,10 @@ class DetailScreen extends StatelessWidget {
                           ),
                         ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 17.0),
+                      const Padding(
+                        padding: EdgeInsets.only(left: 17.0),
                         child: Row(
-                          children: const [
+                          children: [
                             Icon(
                               Icons.place_outlined,
                               color: Colors.black,
@@ -130,13 +130,13 @@ class DetailScreen extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(height: 8.0),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 17.0),
+                      const Padding(
+                        padding: EdgeInsets.only(left: 17.0),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Row(
-                              children: const [
+                              children: [
                                 Icon(
                                   Icons.star,
                                   color: Colors.deepOrange,
@@ -154,9 +154,9 @@ class DetailScreen extends StatelessWidget {
                               ],
                             ),
                             Padding(
-                              padding: const EdgeInsets.only(right: 12.0),
+                              padding: EdgeInsets.only(right: 12.0),
                               child: Row(
-                                children: const [
+                                children: [
                                   Text(
                                     '₹580',
                                     style: TextStyle(
@@ -186,12 +186,12 @@ class DetailScreen extends StatelessWidget {
                           color: Colors.black12,
                         ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 18.0),
+                      const Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 18.0),
                         child: Row(
                           crossAxisAlignment: CrossAxisAlignment.end,
                           mainAxisAlignment: MainAxisAlignment.start,
-                          children: const [
+                          children: [
                             Text(
                               'Set in Vung Tau, 100 meters from Front Beach, BaLi\nMotel Vung Tau offers accommodation with a\ngarden, private parking and a shared...',
                               style: TextStyle(
@@ -236,7 +236,8 @@ class DetailScreen extends StatelessWidget {
                                   const EdgeInsets.symmetric(horizontal: 12.0),
                               padding: const EdgeInsets.all(8.0),
                               decoration: BoxDecoration(
-                                color: Colors.white,
+                                color:
+                                    index == 1 ? Colors.white : Colors.white24,
                                 borderRadius: BorderRadius.circular(20.0),
                                 border: Border.all(
                                   color: Colors.black38,
@@ -282,6 +283,110 @@ class DetailScreen extends StatelessWidget {
                             fontSize: 25.0,
                             fontFamily: "poppins_bold",
                             color: Colors.black,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(height: 5.0),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 17.0),
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            ClipRRect(
+                              borderRadius: BorderRadius.circular(15.0),
+                              child: Image.network(
+                                'https://indonesia.tripcanvas.co/wp-content/uploads/2020/08/Bali-pool-villa-feature.jpg',
+                                width: 65.0,
+                                height: 65.0,
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                            const SizedBox(width: 10.0),
+                            const Column(
+                              children: [
+                                Text(
+                                  'Harleen Smith',
+                                  style: TextStyle(
+                                    fontSize: 18.0,
+                                    fontFamily: "poppins_medium",
+                                    color: Colors.black,
+                                  ),
+                                ),
+                                SizedBox(height: 8.0),
+                                Padding(
+                                  padding: EdgeInsets.only(left: 3.0),
+                                  child: Row(
+                                    children: [
+                                      Icon(
+                                        Icons.star,
+                                        color: Colors.deepOrange,
+                                        size: 22.0,
+                                      ),
+                                      SizedBox(width: 5.0),
+                                      Text(
+                                        '4.9(1.4K review)',
+                                        style: TextStyle(
+                                          fontSize: 15.0,
+                                          fontFamily: "poppins",
+                                          color: Colors.black,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                            const SizedBox(width: 90.0),
+                            Material(
+                              elevation: 8.0,
+                              borderRadius: BorderRadius.circular(13.0),
+                              child: Container(
+                                width: 50.0,
+                                height: 50.0,
+                                decoration: BoxDecoration(
+                                  color: Colors.orange,
+                                  borderRadius: BorderRadius.circular(13.0),
+                                  border: Border.all(
+                                    color: Colors.transparent,
+                                  ),
+                                ),
+                                child: const Icon(
+                                  Icons.message_outlined,
+                                  size: 25.0,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      const SizedBox(height: 15.0),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 17.0),
+                        child: InkWell(
+                          onTap: () {},
+                          child: Material(
+                            elevation: 10.0,
+                            borderRadius: BorderRadius.circular(18.0),
+                            child: Container(
+                              width: 380.0,
+                              height: 60.0,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(18.0),
+                                color: Colors.blue,
+                              ),
+                              child: const Center(
+                                child: Text(
+                                  'Book Now',
+                                  style: TextStyle(
+                                    fontFamily: 'poppins_bold',
+                                    color: Colors.white,
+                                    fontSize: 18.0,
+                                    letterSpacing: 0.4,
+                                  ),
+                                ),
+                              ),
+                            ),
                           ),
                         ),
                       ),
